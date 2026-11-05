@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights | Lawion and Partners | Advocates &amp; Corporate Counsel</title>
+    <meta name="description" content="Lawion & Partners insights and deal announcements across Capital Markets, Initial Public Offerings (IPOs), Technology & AI, and Music & Entertainment.">
+    <meta property="og:title" content="Insights | Lawion and Partners">
+    <meta property="og:description" content="Official deal announcements and advisory insights from Lawion & Partners Advocates and Corporate Counsel.">
+    
+    <!-- 1. Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 2. Iconify for Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- 3. Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    
+    <!-- 4. Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#F8F5F0',
+                            100: '#e6eef5',
+                            200: '#c1d4e6',
+                            300: '#90b3d1',
+                            400: '#5a8fba',
+                            500: '#3d719e',
+                            600: '#2c5780',
+                            700: '#234566',
+                            800: '#1b354f',
+                            900: '#0F1C2E',
+                            950: '#1A1A1A',
+                        },
+                        accent: {
+                            400: '#d1b16a',
+                            500: '#C9A14A',
+                            600: '#b58e39',
+                        },
+                        textMain: '#2B2B2B'
+                    },
+                    backgroundImage: {
+                        'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%23C9A14A' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E\")",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- 5. Custom Styling -->
+    <style>
+        body {
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body class="bg-[#fcfbfc] text-brand-900 antialiased font-sans flex flex-col min-h-screen selection:bg-brand-200 selection:text-brand-900">
+
+    <!-- ================= NAVIGATION ================= -->
+    <nav class="fixed top-0 w-full z-50 bg-brand-900 border-b border-brand-800 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative">
+            <a href="index.html" class="flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 md:static md:translate-x-0 md:translate-y-0 w-max" aria-label="Lawion and Partners Home">
+                <img src="assets/logo.webp" alt="Lawion and Partners Logo" class="w-[100px] h-[100px] md:w-[120px] md:h-[120px] object-contain">
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-10">
+                <a href="index.html" class="nav-link text-xs font-medium text-white/70 hover:text-accent-500 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-accent-500 hover:after:w-full after:transition-all">Home</a>
+                <a href="practice.html" class="nav-link text-xs font-medium text-white/70 hover:text-accent-500 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-accent-500 hover:after:w-full after:transition-all">Practice areas</a>
+                <a href="attorneys.html" class="nav-link text-xs font-medium text-white transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:h-px after:bg-accent-500 hover:after:w-full after:transition-all hover:text-accent-500 after:w-full">Insights</a>
+                <a href="cases.html" class="nav-link text-xs font-medium text-white/70 hover:text-accent-500 transition-colors relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-px after:bg-accent-500 hover:after:w-full after:transition-all">Career and internships</a>
+            </div>
+
+            <!-- CTA -->
+            <div class="hidden md:flex">
+                <a href="contact.html" class="bg-accent-500 hover:bg-accent-600 text-[#2B2B2B] text-xs font-semibold px-6 py-3 rounded-sm transition-all shadow-lg shadow-black/20 flex items-center gap-2 group">
+                    <span>Contact us</span>
+                    <iconify-icon icon="solar:arrow-right-linear" width="16" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden absolute right-6 top-1/2 -translate-y-1/2 text-white" onclick="toggleMobileMenu()" aria-label="Toggle navigation menu">
+                <iconify-icon icon="solar:hamburger-menu-linear" width="24"></iconify-icon>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-brand-950 border-b border-brand-800 p-6 flex flex-col gap-6 shadow-xl animate-fade-in-down">
+            <a href="index.html" class="text-left text-sm font-medium text-white/70 hover:text-accent-500">Home</a>
+            <a href="practice.html" class="text-left text-sm font-medium text-white/70 hover:text-accent-500">Practice areas</a>
+            <a href="attorneys.html" class="text-left text-sm font-medium text-white">Insights</a>
+            <a href="cases.html" class="text-left text-sm font-medium text-white/70 hover:text-accent-500">Career and internships</a>
+            <a href="contact.html" class="text-left text-sm font-medium text-accent-500">Contact us</a>
+        </div>
+    </nav>
+
+    <!-- ================= MAIN CONTENT ================= -->
+    <main id="main-content" class="flex-grow pt-20">
+        
+        <!-- HEADER HERO -->
+        <section class="relative bg-brand-950 py-20 md:py-28 overflow-hidden bg-grid-pattern">
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-900/95 via-brand-950/95 to-brand-950"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 relative z-10">
+                <div class="max-w-3xl">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="h-px w-10 bg-accent-500"></span>
+                        <span class="text-accent-500 text-xs font-bold uppercase tracking-[0.2em]">Firm Announcements &amp; Advisory</span>
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-serif text-white mb-6 tracking-tight">
+                        Insights
+                    </h1>
+                    <p class="text-stone-300 font-light text-base md:text-lg leading-relaxed">
+                        Highlights of Lawion &amp; Partners' involvement in initial public offerings, cutting-edge technology ventures, and key transactions across the music and entertainment industry.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAIN INSIGHTS CONTENT -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-5xl mx-auto px-6">
+
+                <!-- CATEGORY FILTER BUTTONS -->
+                <div class="flex flex-wrap items-center gap-2 pb-8 border-b border-stone-200 mb-12">
+                    <button onclick="filterCategory('all')" id="tab-all" class="category-btn px-4 py-2 text-xs font-semibold rounded-sm transition-all bg-brand-900 text-white">
+                        All Insights
+                    </button>
+                    <button onclick="filterCategory('capital-markets')" id="tab-capital-markets" class="category-btn px-4 py-2 text-xs font-medium rounded-sm transition-all text-stone-600 hover:text-brand-900 hover:bg-stone-100">
+                        Capital Markets &amp; IPOs
+                    </button>
+                    <button onclick="filterCategory('tech-ai')" id="tab-tech-ai" class="category-btn px-4 py-2 text-xs font-medium rounded-sm transition-all text-stone-600 hover:text-brand-900 hover:bg-stone-100">
+                        Technology &amp; AI
+                    </button>
+                    <button onclick="filterCategory('music')" id="tab-music" class="category-btn px-4 py-2 text-xs font-medium rounded-sm transition-all text-stone-600 hover:text-brand-900 hover:bg-stone-100">
+                        Music &amp; Entertainment
+                    </button>
+                </div>
+
+                <!-- LIST OF INSIGHTS (PRESENTED IN FULL DIRECTLY ON THE PAGE) -->
+                <div class="space-y-12" id="insights-container">
+
+                    <!-- INSIGHT 1: IPO -->
+                    <article class="insight-item border-b border-stone-200 pb-12 last:border-b-0" data-cat="capital-markets">
+                        <div class="text-xs font-semibold text-accent-600 uppercase tracking-widest mb-3">
+                            Capital Markets · Initial Public Offerings
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-serif text-brand-900 mb-5 leading-tight tracking-tight">
+                            Lawion &amp; Partners is proud to highlight its involvement in successful Initial Public Offering (IPO) launches across diverse industries.
+                        </h2>
+                        <div class="text-stone-700 font-light text-base md:text-lg leading-relaxed space-y-4">
+                            <p>
+                                The firm's commitment to legal excellence and strategic advisory support reflects its focus on assisting businesses through significant corporate milestones. From navigating regulatory requirements to addressing complex legal considerations, Lawion &amp; Partners supports clients throughout their growth and capital market journeys.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- INSIGHT 2: AI MUSIC PLATFORM -->
+                    <article class="insight-item border-b border-stone-200 pb-12 last:border-b-0" data-cat="tech-ai">
+                        <div class="text-xs font-semibold text-accent-600 uppercase tracking-widest mb-3">
+                            Technology &amp; Media · Artificial Intelligence
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-serif text-brand-900 mb-5 leading-tight tracking-tight">
+                            Lawion &amp; Partners Acts as Legal Advisor to an Upcoming AI Music Platform
+                        </h2>
+                        <div class="text-stone-700 font-light text-base md:text-lg leading-relaxed space-y-4">
+                            <p>
+                                Lawion &amp; Partners is pleased to announce its engagement as legal advisor to an upcoming AI-powered music platform, the name of which remains confidential.
+                            </p>
+                            <p>
+                                The engagement reflects the firm's commitment to supporting innovation at the intersection of technology, music, and entertainment. As artificial intelligence continues to reshape the music industry, legal guidance plays an important role in addressing contractual arrangements, intellectual property rights, and emerging legal considerations.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- INSIGHT 3: YAA TU YAA MAIN, 7 BANTAI -->
+                    <article class="insight-item border-b border-stone-200 pb-12 last:border-b-0" data-cat="music">
+                        <div class="text-xs font-semibold text-accent-600 uppercase tracking-widest mb-3">
+                            Music &amp; Entertainment · Artist Representation
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-serif text-brand-900 mb-5 leading-tight tracking-tight">
+                            Lawion &amp; Partners Serves as Legal Advisor to Yaa Tu Yaa Main, Music Group 7 Bantai
+                        </h2>
+                        <div class="text-stone-700 font-light text-base md:text-lg leading-relaxed space-y-4">
+                            <p>
+                                Lawion &amp; Partners is pleased to announce its association as legal advisor to Yaa Tu Yaa Main, representing the musical journey of 7 Bantai. This association reflects the importance of professional legal guidance in the music and entertainment industry, particularly in supporting artists and safeguarding their creative interests.
+                            </p>
+                            <p>
+                                Through this association, Lawion &amp; Partners reaffirms its commitment to providing reliable legal guidance, protecting rights, and supporting creative professionals in navigating the evolving entertainment landscape.
+                            </p>
+                            <p class="italic text-brand-900 font-normal">
+                                At Lawion &amp; Partners, we believe that strong legal foundations play a vital role in enabling artists to pursue their creative vision with confidence.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- INSIGHT 4: 7BANTAI ALBUM DEAL WITH AZADI RECORDS -->
+                    <article class="insight-item border-b border-stone-200 pb-12 last:border-b-0" data-cat="music">
+                        <div class="text-xs font-semibold text-accent-600 uppercase tracking-widest mb-3">
+                            Record Label Agreements · Azadi Records
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-serif text-brand-900 mb-5 leading-tight tracking-tight">
+                            Lawion &amp; Partners Acts as Legal Advisor to 7Bantai for Album Deal with Azadi Records
+                        </h2>
+                        <div class="text-stone-700 font-light text-base md:text-lg leading-relaxed space-y-4">
+                            <p>
+                                Lawion &amp; Partners is pleased to announce its role as legal advisor to 7Bantai in connection with their album deal with Azadi Records.
+                            </p>
+                            <p>
+                                This association marks an important milestone in the group's musical journey and highlights the significance of professional legal guidance in the music and entertainment industry. Lawion &amp; Partners is proud to support artists in navigating key contractual arrangements while safeguarding their legal and creative interests.
+                            </p>
+                            <p>
+                                The engagement reflects the firm's commitment to supporting the evolving music industry through dedicated legal counsel and a strong focus on artists' rights.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- INSIGHT 5: YEHPROOF CONFIDENTIAL LABEL DEAL -->
+                    <article class="insight-item border-b border-stone-200 pb-12 last:border-b-0" data-cat="music">
+                        <div class="text-xs font-semibold text-accent-600 uppercase tracking-widest mb-3">
+                            Music &amp; Entertainment · Artist Advisory
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-serif text-brand-900 mb-5 leading-tight tracking-tight">
+                            Lawion &amp; Partners Acts as Legal Advisor to Yehproof for Confidential Label Deal
+                        </h2>
+                        <div class="text-stone-700 font-light text-base md:text-lg leading-relaxed space-y-4">
+                            <p>
+                                Lawion &amp; Partners is pleased to announce its role as legal advisor to Yehproof in connection with an artist deal with a leading music label, the name of which remains confidential.
+                            </p>
+                            <p>
+                                The engagement reflects the firm's commitment to providing strategic legal guidance in the music and entertainment industry, with a focus on contractual matters, artists’ rights, and the protection of creative interests.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- INSIGHT 6: DHANJI RECORD LABEL DEAL -->
+                    <article class="insight-item border-b border-stone-200 pb-12 last:border-b-0" data-cat="music">
+                        <div class="text-xs font-semibold text-accent-600 uppercase tracking-widest mb-3">
+                            Music &amp; Entertainment · Record Label Agreement
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-serif text-brand-900 mb-5 leading-tight tracking-tight">
+                            Lawion &amp; Partners Acts as Legal Advisor to Dhanji for Record Label Deal
+                        </h2>
+                        <div class="text-stone-700 font-light text-base md:text-lg leading-relaxed space-y-4">
+                            <p>
+                                Lawion &amp; Partners is pleased to announce its role as legal advisor to indian rap artist Dhanji in connection with his record label deal.
+                            </p>
+                            <p>
+                                The engagement reflects the firm's commitment to supporting artists across the music and entertainment industry by providing legal guidance on contractual arrangements and protecting their professional interests.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CTA SECTION -->
+        <section class="bg-brand-50 border-t border-stone-200 py-16">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h3 class="text-2xl md:text-3xl font-serif text-brand-900 mb-3 tracking-tight">Need Legal Counsel?</h3>
+                <p class="text-stone-500 font-light text-sm max-w-xl mx-auto mb-8 leading-relaxed">
+                    Whether navigating capital markets, emerging technologies, or entertainment contracts, Lawion &amp; Partners provides tailored strategic guidance.
+                </p>
+                <a href="contact.html" class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-[#2B2B2B] text-xs font-semibold px-8 py-3.5 rounded-sm transition-all shadow-md">
+                    <span>Contact Our Team</span>
+                    <iconify-icon icon="solar:arrow-right-linear" width="16"></iconify-icon>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-brand-900 border-t border-brand-800 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12 mb-20">
+                <div class="col-span-1 md:col-span-1">
+                    <a href="index.html" class="inline-block mb-8">
+                        <img src="assets/logo.webp" alt="Lawion and Partners Logo" class="h-24 md:h-28 object-contain">
+                    </a>
+                    <p class="text-xs text-white/60 leading-relaxed mb-8 pr-4">
+                        A premier law firm committed to providing exceptional legal representation across India. Justice, Integrity, Excellence.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-6">Practice Areas</h4>
+                    <ul class="space-y-4 text-xs text-white/60 font-medium">
+                        <li><a href="practice.html" class="hover:text-accent-500 transition-colors">Litigation &amp; Dispute Resolution</a></li>
+                        <li><a href="practice.html" class="hover:text-accent-500 transition-colors">IP Protection &amp; Portfolio Management</a></li>
+                        <li><a href="practice.html" class="hover:text-accent-500 transition-colors">Corporate &amp; Commercial Law</a></li>
+                        <li><a href="practice.html" class="hover:text-accent-500 transition-colors">Banking &amp; Insurance</a></li>
+                        <li><a href="practice.html" class="hover:text-accent-500 transition-colors">Real Estate &amp; Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold text-white uppercase tracking-widest mb-6">Firm</h4>
+                    <ul class="space-y-4 text-xs text-white/60 font-medium">
+                        <li><a href="index.html" class="hover:text-accent-500 transition-colors">Home</a></li>
+                        <li><a href="attorneys.html" class="hover:text-accent-500 transition-colors">Insights</a></li>
+                        <li><a href="cases.html" class="hover:text-accent-500 transition-colors">Career and internships</a></li>
+                        <li><a href="contact.html" class="hover:text-accent-500 transition-colors">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-stone-200/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-[10px] text-white/40 uppercase tracking-wider">© 2026 Lawion and Partners. All rights reserved.</p>
+                <div class="flex gap-6 text-[10px] text-white/40 uppercase tracking-wider">
+                    <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="terms.html" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/919990404665" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 w-12 h-12 md:w-14 md:h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#1EBE57] hover:-translate-y-1 hover:shadow-xl transition-all duration-300 z-50 group" aria-label="Chat on WhatsApp">
+        <iconify-icon icon="ic:baseline-whatsapp" width="28" class="md:hidden"></iconify-icon>
+        <iconify-icon icon="ic:baseline-whatsapp" width="32" class="hidden md:block"></iconify-icon>
+        <span class="absolute right-[115%] bg-white text-stone-800 text-xs font-semibold px-3 py-2 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap border border-stone-100">
+            Chat with us
+        </span>
+    </a>
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        }
+
+        function filterCategory(category) {
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-brand-900', 'text-white');
+                btn.classList.add('text-stone-600');
+            });
+
+            const activeBtn = document.getElementById(`tab-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-stone-600');
+                activeBtn.classList.add('bg-brand-900', 'text-white');
+            }
+
+            const items = document.querySelectorAll('.insight-item');
+            items.forEach(item => {
+                const cat = item.getAttribute('data-cat');
+                if (category === 'all' || cat === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
