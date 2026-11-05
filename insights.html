@@ -69,6 +69,12 @@
             from { opacity: 0; transform: translateY(16px); }
             to { opacity: 1; transform: translateY(0); }
         }
+        .parallax-bg {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
     </style>
 </head>
 
@@ -116,9 +122,9 @@
     <!-- ================= MAIN CONTENT ================= -->
     <main id="main-content" class="flex-grow pt-20">
         
-        <!-- HEADER HERO -->
-        <section class="relative bg-brand-950 py-20 md:py-28 overflow-hidden bg-grid-pattern">
-            <div class="absolute inset-0 bg-gradient-to-b from-brand-900/95 via-brand-950/95 to-brand-950"></div>
+        <!-- HEADER HERO WITH HANDSHAKE IMAGE BANNER -->
+        <section class="relative bg-brand-950 py-24 md:py-32 parallax-bg overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&amp;w=2069&amp;auto=format&amp;fit=crop');">
+            <div class="absolute inset-0 bg-brand-900/85 backdrop-blur-[1px]"></div>
             
             <div class="max-w-7xl mx-auto px-6 relative z-10">
                 <div class="max-w-3xl">
